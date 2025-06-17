@@ -3,6 +3,8 @@ services:
     build: .
     container_name: clearcut
     restart: unless-stopped
+    ports:
+      - "127.0.0.1:8000:8000"
     environment:
       - PYTHONUNBUFFERED=1
       - MAX_FILE_SIZE=10485760  # 10MB
@@ -10,3 +12,5 @@ services:
       - TEMP_DIR=/tmp/clearcut
     volumes:
       - /tmp/clearcut:/tmp/clearcut
+    mem_limit: 1.5g
+    cpus: 1.8

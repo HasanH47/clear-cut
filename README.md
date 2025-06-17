@@ -33,7 +33,7 @@
 
 ### 1. Clone Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/HasanH47/clear-cut.git
 cd clearcut
 ```
 
@@ -52,7 +52,7 @@ Add to your Caddyfile:
 ```caddy
 clearcut.hasanh.dev {
     reverse_proxy localhost:8000
-    
+
     # Security headers
     header {
         X-Content-Type-Options nosniff
@@ -60,7 +60,7 @@ clearcut.hasanh.dev {
         X-XSS-Protection "1; mode=block"
         Referrer-Policy strict-origin-when-cross-origin
     }
-    
+
     # Rate limiting (optional)
     rate_limit {
         zone clearcut
@@ -174,7 +174,7 @@ sudo useradd -r -s /bin/false clearcut
 ### 2. Deploy Application
 ```bash
 # Clone and deploy
-git clone <repository-url> /opt/clearcut
+git clone https://github.com/HasanH47/clear-cut.git /opt/clearcut
 cd /opt/clearcut
 sudo chown -R clearcut:clearcut /opt/clearcut
 
