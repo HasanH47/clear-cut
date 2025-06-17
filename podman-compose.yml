@@ -1,0 +1,12 @@
+services:
+  clearcut:
+    build: .
+    container_name: clearcut
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MAX_FILE_SIZE=10485760  # 10MB
+      - ALLOWED_EXTENSIONS=jpg,jpeg,png,webp
+      - TEMP_DIR=/tmp/clearcut
+    volumes:
+      - /tmp/clearcut:/tmp/clearcut
