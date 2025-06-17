@@ -20,3 +20,4 @@ instance
 .pytest_cache
 venv
 .python-version
+.pytest_cache
